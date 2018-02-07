@@ -55,7 +55,7 @@
             android:theme="@style/AppTheme.NoActionBar"
             android:parentActivityName=".activities.LoginActivity">
 
-        ></activity>
+        </activity>
     </application>
 
 </manifest>

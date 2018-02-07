@@ -73,12 +73,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -88,9 +82,7 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+
 
         return super.onOptionsItemSelected(item);
     }
@@ -133,17 +125,17 @@ public class MainActivity extends AppCompatActivity {
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
             ImageView image = (ImageView) rootView.findViewById(R.id.image);
               btnLogin=(Button)rootView.findViewById(R.id.btnLogin);
-              btnRegister=(Button)rootView.findViewById(R.id.btnRegister);
+      //        btnRegister=(Button)rootView.findViewById(R.id.btnRegister);
 
             TextView textView = (TextView) rootView.findViewById(R.id.section_label);
        //     image.
             textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
 
-            if(getArguments().getInt(ARG_SECTION_NUMBER) == 2)
-            {
-                btnLogin.setVisibility( View.VISIBLE );
-                btnRegister.setVisibility( View.VISIBLE );
-            }
+            //if(getArguments().getInt(ARG_SECTION_NUMBER) == 2)
+           // {
+              //  btnLogin.setVisibility( View.VISIBLE );
+              //  btnRegister.setVisibility( View.VISIBLE );
+//            }
 
             btnLogin.setOnClickListener(new View.OnClickListener() {
         @Override
@@ -154,14 +146,14 @@ public class MainActivity extends AppCompatActivity {
         }
     });
 
-    btnRegister.setOnClickListener(new View.OnClickListener() {
+   /* btnRegister.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick (View view) {
             Intent intent;
             intent = new Intent(getContext(),LoginActivity.class);
             startActivity(intent);
         }
-    });
+    });*/
 
             return rootView;
         }

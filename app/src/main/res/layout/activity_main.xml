@@ -62,7 +62,7 @@
             android:id="@+id/tabselectot"
             app:tabBackground="@drawable/tab_selector"
             app:tabGravity="center"
-            android:layout_marginBottom="200dp"
+            android:layout_marginBottom="150dp"
             app:tabIndicatorHeight="0dp"/>
 
 

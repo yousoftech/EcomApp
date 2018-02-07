@@ -27,6 +27,8 @@
             android:layout_height="400px"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:gravity="center"
+            android:layout_centerVertical="true"
             android:layout_marginEnd="@dimen/activity_horizontal_margin"
             android:layout_marginStart="@dimen/activity_horizontal_margin"
             android:layout_marginTop="@dimen/activity_vertical_margin"
@@ -44,26 +46,25 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/btnLogin"
+            android:layout_margin="80dp"
             android:layout_below="@id/tabselectot"
-            android:layout_margin="15dp"
-            android:visibility="gone"
             android:layout_alignParentRight="true"
-            android:background="@color/colorPrimary"
-            android:text="LOGIN"
+            android:background="@drawable/button_round"
+            android:text="GET STARTED"
 
             />
-        <Button
+      <!--  <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/btnRegister"
             android:layout_below="@id/btnLogin"
-            android:layout_margin="15dp"
+            android:layout_margin="@dimen/edtlayoutMargin"
             android:layout_alignParentRight="true"
-            android:background="@color/colorPrimary"
+            android:background="@drawable/button_round"
             android:visibility="gone"
             android:text="REGISTER"
 
-            />
+            />-->
     </RelativeLayout>
 
 
