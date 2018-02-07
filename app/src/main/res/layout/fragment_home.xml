@@ -2,18 +2,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.arpitshah.ecomapp.fragments.chai">
+    tools:context="com.example.arpitshah.ecomapp.fragments.home_fragment">
 
     <!-- TODO: Update blank fragment layout -->
 
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="285dp"
-        android:text="Chai Fragment"
+        android:layout_marginTop="295dp"
+        android:text="Home Fragment"
         android:textSize="50dp"/>
 </RelativeLayout>

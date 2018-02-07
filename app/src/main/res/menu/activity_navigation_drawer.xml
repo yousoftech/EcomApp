@@ -5,9 +5,17 @@
 
     <group android:checkableBehavior="single">
         <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Home" />
+    </group>
+    <group android:checkableBehavior="single">
+        <item
             android:id="@+id/nav_chai"
             android:icon="@drawable/ic_menu_camera"
             android:title="Chai" />
+    </group>
+    <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_sutta"
             android:icon="@drawable/ic_menu_gallery"
@@ -15,47 +23,38 @@
         <item
             android:id="@+id/nav_rajnigandha"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="Rajni Gandha" />
+            android:title="Guthkhas" />
         <item
             android:id="@+id/nav_other"
             android:icon="@drawable/ic_menu_manage"
             android:title="Others" />
+        <item
+            android:id="@+id/nav_cart"
+            android:icon="@drawable/ic_menu_share"
+            android:title="Cart" />
+        <item
+            android:id="@+id/nav_order"
+            android:icon="@drawable/ic_menu_send"
+            android:title="Order History" />
+
+        <item
+            android:id="@+id/nav_Track"
+            android:icon="@drawable/ic_menu_send"
+            android:title="Track Order" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_menu_share"
+            android:title="Profile" />
+        <item
+            android:id="@+id/nav_feedback"
+            android:icon="@drawable/ic_menu_send"
+            android:title="Feed Back" />
+
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_menu_send"
+            android:title="Log Out" />
     </group>
 
-    <item android:title="History">
-        <menu>
-            <item
-                android:id="@+id/nav_cart"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Cart" />
-            <item
-                android:id="@+id/nav_orders"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Order History" />
-
-            <item
-                android:id="@+id/nav_Track"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Track Order" />
-        </menu>
-    </item>
-
-    <item android:title="Accounts">
-        <menu>
-            <item
-                android:id="@+id/nav_profile"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Profile" />
-            <item
-                android:id="@+id/nav_feedback"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Feed Back" />
-
-            <item
-                android:id="@+id/nav_logout"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Log Out" />
-        </menu>
-    </item>
 
 </menu>

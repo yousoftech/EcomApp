@@ -2,11 +2,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.arpitshah.ecomapp.fragments.chai">
+    tools:context="com.example.arpitshah.ecomapp.fragments.sutta_fragment">
 
     <!-- TODO: Update blank fragment layout -->
-
-
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
@@ -14,6 +12,6 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="285dp"
-        android:text="Chai Fragment"
+        android:text="Cigarattes / Sutta"
         android:textSize="50dp"/>
 </RelativeLayout>

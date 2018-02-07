@@ -3,6 +3,7 @@ package com.example.arpitshah.ecomapp.activities;
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
@@ -17,7 +18,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.arpitshah.ecomapp.R;
@@ -38,13 +41,18 @@ public class MainActivity extends AppCompatActivity {
      * The {@link ViewPager} that will host the section contents.
      */
     private ViewPager mViewPager;
-
+RelativeLayout r1;
+Button btnLogin,btnRegister;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-      //  Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        r1=(RelativeLayout)findViewById(R.id.r1);
+        btnLogin=(Button)findViewById(R.id.btnLogin);
+        btnRegister=(Button)findViewById(R.id.btnRegister);
+
+        //  Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         //setSupportActionBar(toolbar);
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
@@ -53,19 +61,32 @@ public class MainActivity extends AppCompatActivity {
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
+        mViewPager.setPageTransformer(true, new ZoomOutPageTransformer());
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-               Intent intent;
-                intent = new Intent(getApplicationContext(),LoginActivity.class);
-                startActivity(intent);
 
-            }
-        });
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabselectot);
+        tabLayout.setupWithViewPager(mViewPager, true);
 
+
+    btnLogin.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick (View view) {
+            Intent intent;
+            intent = new Intent(MainActivity.this,LoginActivity.class);
+            startActivity(intent);
+        }
+    });
+
+    btnRegister.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick (View view) {
+            Intent intent;
+            intent = new Intent(MainActivity.this,LoginActivity.class);
+            startActivity(intent);
+        }
+    });
     }
+
 
 
     @Override
@@ -108,11 +129,13 @@ public class MainActivity extends AppCompatActivity {
          * number.
          */
         public static PlaceholderFragment newInstance(int sectionNumber) {
+
             PlaceholderFragment fragment = new PlaceholderFragment();
             Bundle args = new Bundle();
             args.putInt(ARG_SECTION_NUMBER, sectionNumber);
             fragment.setArguments(args);
             return fragment;
+
         }
 
         @Override
@@ -120,6 +143,7 @@ public class MainActivity extends AppCompatActivity {
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
             ImageView image = (ImageView) rootView.findViewById(R.id.image);
+
             TextView textView = (TextView) rootView.findViewById(R.id.section_label);
        //     image.
             textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
@@ -139,6 +163,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public Fragment getItem(int position) {
+
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
             return PlaceholderFragment.newInstance(position + 1);
@@ -148,6 +173,16 @@ public class MainActivity extends AppCompatActivity {
         public int getCount() {
             // Show 3 total pages.
             return 3;
+        }
+    }
+    public void onBackPressed() {
+        if (mViewPager.getCurrentItem() == 0) {
+            // If the user is currently looking at the first step, allow the system to handle the
+            // Back button. This calls finish() on this activity and pops the back stack.
+            super.onBackPressed();
+        } else {
+            // Otherwise, select the previous step.
+            mViewPager.setCurrentItem(mViewPager.getCurrentItem() - 1);
         }
     }
 }

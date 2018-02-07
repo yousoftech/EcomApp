@@ -1,10 +1,9 @@
 package com.example.arpitshah.ecomapp.activities;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentManager;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -15,7 +14,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.example.arpitshah.ecomapp.R;
-import com.example.arpitshah.ecomapp.fragments.fragmentCart;
+import com.example.arpitshah.ecomapp.fragments.chai;
+import com.example.arpitshah.ecomapp.fragments.fragment_cart;
+import com.example.arpitshah.ecomapp.fragments.home_fragment;
+import com.example.arpitshah.ecomapp.fragments.*;
 
 
 public class Navigation extends AppCompatActivity
@@ -28,15 +30,17 @@ public class Navigation extends AppCompatActivity
         setContentView(R.layout.activity_navigation);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+      //  home_fragment home_fragment =new home_fragment();
+        //FragmentManager fragmentManager=getSupportFragmentManager();
+       // fragmentManager.beginTransaction().replace(R.id.nav_view,home_fragment,home_fragment.getTag());
+      /*  FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick (View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
-        });
+        });*/
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -46,11 +50,12 @@ public class Navigation extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        home_fragment home = new home_fragment();
+        FragmentManager fragmentManager1 = getSupportFragmentManager();
+        fragmentManager1.beginTransaction().replace(R.id.navConent,home,home.getTag()).commit();
+        setTitle("Home");
 
-    /*    fragmentCart cart = new fragmentCart();
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.main_content,cart,cart.getTag()).commit();
-isFirst=true;*/
+        isFirst=true;
     }
 
     @Override
@@ -85,6 +90,7 @@ isFirst=true;*/
         return super.onOptionsItemSelected(item);
     }
 
+    @SuppressLint("ResourceType")
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected (MenuItem item) {
@@ -93,30 +99,78 @@ isFirst=true;*/
 
         if (id == R.id.nav_cart) {
             // Handle the camera action
-        //    fragmentCart cart = new fragmentCart();
-         //   FragmentManager fragmentManager = getSupportFragmentManager();
-            // fragmentManager.beginTransaction().replace(R.id.main_content,cart,cart.getTag()).commit();
+            fragment_cart cart = new fragment_cart();
+           FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.navConent,cart,cart.getTag()).commit();
+            setTitle("Cart");
 
-        } else if (id == R.id.nav_chai) {
+
+        }
+        else if(id==R.id.nav_home)
+        {
+            home_fragment home = new home_fragment();
+            FragmentManager fragmentManager1 = getSupportFragmentManager();
+            fragmentManager1.beginTransaction().replace(R.id.navConent,home,home.getTag()).commit();
+            setTitle("Home");
+
+
+        }
+            else if (id == R.id.nav_chai) {
+
+            chai chai_f=new chai();
+            FragmentManager fragmentManager=getSupportFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.navConent,chai_f,chai_f.getTag()).commit();
+            setTitle("Chai");
 
         } else if (id == R.id.nav_feedback) {
-
-        } else if (id == R.id.nav_orders) {
+            FeedbackFragment feedback=new FeedbackFragment();
+            FragmentManager fragmentManager=getSupportFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.navConent,feedback,feedback.getTag()).commit();
+            setTitle("FeedBack");
+        } else if (id == R.id.nav_order) {
+            orderhistoryFragment order =new orderhistoryFragment();
+            FragmentManager fragmentManager=getSupportFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.navConent,order,order.getTag()).commit();
+            setTitle("Order History");
 
         } else if (id == R.id.nav_other) {
+            otherFragment other=new otherFragment();
+            FragmentManager fragmentManager=getSupportFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.navConent,other,other.getTag()).commit();
+            setTitle("Other");
+
 
         } else if (id == R.id.nav_profile) {
 
+            profileFragment profile=new profileFragment();
+            FragmentManager fragmentManager=getSupportFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.navConent,profile,profile.getTag()).commit();
+            setTitle("Profile");
+
         }
         else if (id == R.id.nav_rajnigandha) {
+            rajnigandha_fragment rajni=new rajnigandha_fragment();
+            FragmentManager fragmentManager=getSupportFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.navConent,rajni,rajni.getTag()).commit();
+            setTitle("Rajni Gandha");
 
         }else if (id == R.id.nav_sutta) {
+            sutta_fragment sutta=new sutta_fragment();
+            FragmentManager fragmentManager=getSupportFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.navConent,sutta,sutta.getTag()).commit();
+            setTitle("Sutta Cigarate");
 
         }
         else if (id == R.id.nav_Track) {
+            trackorderFragment track =new trackorderFragment();
+            FragmentManager fragmentManager=getSupportFragmentManager();
 
+            fragmentManager.beginTransaction().replace(R.id.navConent,track,track.getTag()).commit();
+            setTitle("Track Order");
         }
         else if (id == R.id.nav_logout) {
+            Intent i=new Intent(this,LoginActivity.class);
+            startActivity(i);
 
         }
 
