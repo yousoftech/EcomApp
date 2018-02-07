@@ -38,6 +38,8 @@
         <activity
             android:name=".activities.LoginActivity"
             android:label="@string/title_activity_login"
+            android:theme="@style/AppTheme.NoActionBar"
+
             android:parentActivityName=".activities.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
