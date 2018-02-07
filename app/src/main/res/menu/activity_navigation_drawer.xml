@@ -11,7 +11,7 @@
     </group>
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_chai"
+            android:id  ="@+id/nav_chai"
             android:icon="@drawable/ic_tea_cup_595b40b85ba036ed117dbc02"
             android:title="Chai" />
     </group>
