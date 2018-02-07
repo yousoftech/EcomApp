@@ -6,19 +6,19 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_home_black_24dp"
             android:title="Home" />
     </group>
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_chai"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_tea_cup_595b40b85ba036ed117dbc02"
             android:title="Chai" />
     </group>
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_sutta"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_no_smoking"
             android:title="Cigrattes" />
         <item
             android:id="@+id/nav_rajnigandha"
@@ -30,29 +30,29 @@
             android:title="Others" />
         <item
             android:id="@+id/nav_cart"
-            android:icon="@drawable/ic_menu_share"
+            android:icon="@drawable/ic_cart"
             android:title="Cart" />
         <item
             android:id="@+id/nav_order"
-            android:icon="@drawable/ic_menu_send"
+            android:icon="@drawable/ic_order_history"
             android:title="Order History" />
 
         <item
             android:id="@+id/nav_Track"
-            android:icon="@drawable/ic_menu_send"
+            android:icon="@drawable/ic_track_order_24dp"
             android:title="Track Order" />
         <item
             android:id="@+id/nav_profile"
-            android:icon="@drawable/ic_menu_share"
+            android:icon="@drawable/ic_profile_24dp"
             android:title="Profile" />
         <item
             android:id="@+id/nav_feedback"
-            android:icon="@drawable/ic_menu_send"
+            android:icon="@drawable/ic_feedback_24dp"
             android:title="Feed Back" />
 
         <item
             android:id="@+id/nav_logout"
-            android:icon="@drawable/ic_menu_send"
+            android:icon="@drawable/ic_logout_24dp"
             android:title="Log Out" />
     </group>
 

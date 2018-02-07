@@ -62,28 +62,11 @@
             android:id="@+id/tabselectot"
             app:tabBackground="@drawable/tab_selector"
             app:tabGravity="center"
+            android:layout_marginBottom="200dp"
             app:tabIndicatorHeight="0dp"/>
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnLogin"
-            android:layout_below="@id/tabselectot"
-            android:layout_margin="15dp"
-            android:layout_alignParentRight="true"
-            android:background="@color/colorPrimary"
-            android:text="LOGIN"
 
-            />
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnRegister"
-            android:layout_below="@id/btnLogin"
-            android:layout_margin="15dp"
-            android:layout_alignParentRight="true"
-            android:background="@color/colorPrimary"
-            android:text="REGISTER"
+
 
             />
 

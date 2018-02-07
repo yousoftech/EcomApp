@@ -41,16 +41,16 @@ public class MainActivity extends AppCompatActivity {
      * The {@link ViewPager} that will host the section contents.
      */
     private ViewPager mViewPager;
-RelativeLayout r1;
-Button btnLogin,btnRegister;
+    static Button btnLogin;
+    static Button btnRegister;
+
+    RelativeLayout r1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         r1=(RelativeLayout)findViewById(R.id.r1);
-        btnLogin=(Button)findViewById(R.id.btnLogin);
-        btnRegister=(Button)findViewById(R.id.btnRegister);
 
         //  Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         //setSupportActionBar(toolbar);
@@ -68,23 +68,7 @@ Button btnLogin,btnRegister;
         tabLayout.setupWithViewPager(mViewPager, true);
 
 
-    btnLogin.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick (View view) {
-            Intent intent;
-            intent = new Intent(MainActivity.this,LoginActivity.class);
-            startActivity(intent);
-        }
-    });
 
-    btnRegister.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick (View view) {
-            Intent intent;
-            intent = new Intent(MainActivity.this,LoginActivity.class);
-            startActivity(intent);
-        }
-    });
     }
 
 
@@ -130,9 +114,12 @@ Button btnLogin,btnRegister;
          */
         public static PlaceholderFragment newInstance(int sectionNumber) {
 
+
             PlaceholderFragment fragment = new PlaceholderFragment();
             Bundle args = new Bundle();
             args.putInt(ARG_SECTION_NUMBER, sectionNumber);
+
+
             fragment.setArguments(args);
             return fragment;
 
@@ -141,12 +128,41 @@ Button btnLogin,btnRegister;
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
+
+
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
             ImageView image = (ImageView) rootView.findViewById(R.id.image);
+              btnLogin=(Button)rootView.findViewById(R.id.btnLogin);
+              btnRegister=(Button)rootView.findViewById(R.id.btnRegister);
 
             TextView textView = (TextView) rootView.findViewById(R.id.section_label);
        //     image.
             textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
+
+            if(getArguments().getInt(ARG_SECTION_NUMBER) == 2)
+            {
+                btnLogin.setVisibility( View.VISIBLE );
+                btnRegister.setVisibility( View.VISIBLE );
+            }
+
+            btnLogin.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick (View view) {
+            Intent intent;
+            intent = new Intent(getContext(),LoginActivity.class);
+            startActivity(intent);
+        }
+    });
+
+    btnRegister.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick (View view) {
+            Intent intent;
+            intent = new Intent(getContext(),LoginActivity.class);
+            startActivity(intent);
+        }
+    });
+
             return rootView;
         }
     }
@@ -164,9 +180,10 @@ Button btnLogin,btnRegister;
         @Override
         public Fragment getItem(int position) {
 
+
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
-            return PlaceholderFragment.newInstance(position + 1);
+            return PlaceholderFragment.newInstance(position );
         }
 
         @Override
