@@ -81,16 +81,18 @@ android:layout_margin="@dimen/edtlayoutMargin"
                     android:singleLine="true" />
 
 
-            <Button
-                android:id="@+id/email_sign_in_button"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/password"
-                android:layout_margin="@dimen/edtlayoutMargin"
-                android:background="@drawable/button_round"
-                android:text="LOG IN"
-                android:textStyle="bold" />
+    <Button
+        android:id="@+id/email_sign_in_button"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvforgotPassword"
+        android:layout_alignStart="@+id/tvforgotPassword"
+        android:layout_below="@+id/password"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_round"
+        android:text="LOG IN"
+        android:textStyle="bold" />
 
             <Button
                 android:id="@+id/tvforgotPassword"

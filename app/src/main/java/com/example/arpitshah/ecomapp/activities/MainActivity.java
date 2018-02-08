@@ -148,14 +148,7 @@ public class MainActivity extends AppCompatActivity {
 
     });
 
-    btnRegister.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick (View view) {
-            Intent intent;
-            intent = new Intent(getContext(),SingupActivity.class);
-            startActivity(intent);
-        }
-    });
+
 
             return rootView;
         }

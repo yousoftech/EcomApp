@@ -27,7 +27,7 @@
 
 
             <Button
-                android:id="@+id/btnYesUpdate"
+                android:id="@+id/btnCart"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_alignParentRight="true"
@@ -35,7 +35,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:layout_marginRight="20dp"
-                android:background="@drawable/ic_cart" />
+                android:background="@drawable/ic_cart2" />
         </RelativeLayout>
         </android.support.v7.widget.Toolbar>
 

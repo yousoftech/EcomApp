@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
@@ -12,64 +13,51 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin">
 
+    <EditText
+        android:id="@+id/edtemail"
+        android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:layout_margin="@dimen/edtlayoutMargin"
+        android:padding="@dimen/edtlayoutMargin"
+        android:layout_below="@+id/txtcaption"
+        android:hint="EMAIL ID"
+        android:textAlignment="center"
+        android:background="@drawable/edt_border"/>
+
     <TextView
-        android:id="@+id/txtsignup"
+        android:id="@+id/txtemail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:layout_gravity="center"
-        android:layout_margin="10dp"
-        android:gravity="center"
-        android:padding="15dp"
-        android:text="SIGN UP"
+        android:layout_margin="@dimen/edtlayoutMargin"
+        android:padding="@dimen/edtlayoutMargin"
         android:textAlignment="center"
-        android:textSize="25dp"
-        android:textStyle="bold" />
-
-
+        android:textStyle="bold"
+        android:text="SING UP"
+        android:textSize="25dp"/>
     <TextView
         android:id="@+id/txtcaption"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txtsignup"
         android:layout_margin="@dimen/edtlayoutMargin"
         android:padding="@dimen/edtlayoutMargin"
-
-        android:inputType="textMultiLine"
-        android:text="Enter the mobile number for get otp"
-        android:textAlignment="center"
-
-        />
-
-    <AutoCompleteTextView
-        android:id="@+id/edtmobile"
-        android:layout_width="match_parent"
+        android:text="Enter your Email Id for verification "
         android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/txtemail"
         android:textAlignment="center"
-        android:hint="Mobile Number"
-        android:inputType="number"
-        android:layout_below="@+id/txtcaption"
-        android:maxLines="1"
-        android:layout_margin="@dimen/edtlayoutMargin"
-        android:padding="@dimen/edtlayoutMargin"
-        android:background="@drawable/edt_border"
-        android:singleLine="true"
+
 
         />
 
     <Button
-        android:id="@+id/btnmobile"
+        android:id="@+id/btnemail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/edtmobile"
+        android:layout_below="@+id/edtemail"
+        android:layout_margin="@dimen/edtlayoutMargin"
+        android:padding="@dimen/edtlayoutMargin"
+        android:text="VERIFY VIA Email Id"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:background="@drawable/button_round"
         android:textStyle="bold"
-        android:text="VERIFY VIA MOBILE NUMBER" />
-
-
-
-
+        />
 </RelativeLayout>

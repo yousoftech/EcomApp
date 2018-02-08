@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="#ffffff"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/edtlayoutMargin"
+        android:layout_margin="@dimen/edtlayoutMargin"
+        android:textAlignment="center"
+        android:inputType="textMultiLine"
+        android:id="@+id/txtOTPCaption" />
+
+    <EditText
+        android:id="@+id/edtotp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtOTPCaption"
+        android:layout_margin="@dimen/edtlayoutMargin"
+        android:padding="@dimen/edtlayoutMargin"
+        android:hint="OTP"
+        android:textAlignment="center"
+        android:inputType="numberPassword"
+        android:background="@drawable/edt_border"/>
+
+    <Button
+        android:id="@+id/btnotp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/edtotp"
+        android:layout_margin="@dimen/edtlayoutMargin"
+        android:padding="@dimen/edtlayoutMargin"
+        android:text="NEXT"
+        android:textStyle="bold"
+        android:background="@drawable/button_round"
+        />
+</RelativeLayout>

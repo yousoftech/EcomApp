@@ -12,7 +12,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-
+import android.view.View;
+import android.widget.Button;
 import com.example.arpitshah.ecomapp.R;
 import com.example.arpitshah.ecomapp.fragments.chai;
 import com.example.arpitshah.ecomapp.fragments.fragment_cart;
@@ -30,6 +31,20 @@ public class Navigation extends AppCompatActivity
         setContentView(R.layout.activity_navigation);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        Button btnCart = (Button)findViewById( R.id.btnCart );
+
+        btnCart.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fragment_cart cart = new fragment_cart();
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                fragmentManager.beginTransaction().replace(R.id.navConent,cart,cart.getTag()).commit();
+                setTitle("My Cart");
+
+            }
+        } );
+
       //  home_fragment home_fragment =new home_fragment();
         //FragmentManager fragmentManager=getSupportFragmentManager();
        // fragmentManager.beginTransaction().replace(R.id.nav_view,home_fragment,home_fragment.getTag());
@@ -97,7 +112,7 @@ public class Navigation extends AppCompatActivity
             fragment_cart cart = new fragment_cart();
            FragmentManager fragmentManager = getSupportFragmentManager();
             fragmentManager.beginTransaction().replace(R.id.navConent,cart,cart.getTag()).commit();
-            setTitle("Cart");
+            setTitle("My Cart");
 
 
         }
