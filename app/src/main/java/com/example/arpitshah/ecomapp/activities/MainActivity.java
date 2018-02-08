@@ -143,17 +143,19 @@ public class MainActivity extends AppCompatActivity {
             Intent intent;
             intent = new Intent(getContext(),LoginActivity.class);
             startActivity(intent);
+
         }
+
     });
 
-   /* btnRegister.setOnClickListener(new View.OnClickListener() {
+    btnRegister.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick (View view) {
             Intent intent;
-            intent = new Intent(getContext(),LoginActivity.class);
+            intent = new Intent(getContext(),SingupActivity.class);
             startActivity(intent);
         }
-    });*/
+    });
 
             return rootView;
         }
