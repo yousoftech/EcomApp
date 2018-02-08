@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.arpitshah.ecomapp.activities.LoginActivity"
+    >
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_marginTop="50dp"
+        app:cardCornerRadius="5dp"
+        android:background="#fff"
+
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rCategory">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:paddingBottom="@dimen/edtlayoutMargin"
+                android:id="@+id/imageCate"
+                android:src="@drawable/chaiback"
+                tools:ignore="NotSibling" />
+
+
+            <TextView
+                android:id="@+id/txt_Category_Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageCate"
+                android:text="CHAI"
+                android:layout_margin="@dimen/edtlayoutMargin"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="NotSibling" />
+
+            <TextView
+                android:id="@+id/txt_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/txt_Category_Name"
+                android:layout_alignBottom="@+id/txt_Category_Name"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:gravity="end"
+                android:layout_margin="@dimen/edtlayoutMargin"
+                android:text="Rs 40"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="NotSibling" />
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/edtlayoutMargin"
+                android:layout_alignLeft="@+id/txt_Category_Name"
+                android:layout_alignStart="@+id/txt_Category_Name"
+                android:layout_below="@+id/txt_price"
+                android:text="Aromatic flavours, very Indian touch to it. Loved the delicious fragrance of gur." />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+
+
+</RelativeLayout>
+

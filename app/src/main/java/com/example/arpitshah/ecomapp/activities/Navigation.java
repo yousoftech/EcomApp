@@ -14,6 +14,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+
 import com.example.arpitshah.ecomapp.R;
 import com.example.arpitshah.ecomapp.fragments.chai;
 import com.example.arpitshah.ecomapp.fragments.fragment_cart;
@@ -24,7 +26,8 @@ import com.example.arpitshah.ecomapp.fragments.*;
 public class Navigation extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    Boolean isFirst=false;
+    Boolean isFirst=false; TextView txtHeader;
+
     @Override
     protected void onCreate (Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +36,8 @@ public class Navigation extends AppCompatActivity
         setSupportActionBar(toolbar);
 
         Button btnCart = (Button)findViewById( R.id.btnCart );
+         txtHeader = (TextView)findViewById( R.id.heading );
+        txtHeader.setText( "Categories" + " ");
 
         btnCart.setOnClickListener( new View.OnClickListener() {
             @Override
@@ -137,6 +142,8 @@ public class Navigation extends AppCompatActivity
             FragmentManager fragmentManager=getSupportFragmentManager();
             fragmentManager.beginTransaction().replace(R.id.navConent,feedback,feedback.getTag()).commit();
             setTitle("FeedBack");
+            txtHeader.setText( "Categories" + " ");
+
         } else if (id == R.id.nav_order) {
             orderhistoryFragment order =new orderhistoryFragment();
             FragmentManager fragmentManager=getSupportFragmentManager();
