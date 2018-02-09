@@ -18,7 +18,8 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".activities.SplashActivity"
-            android:label="Splash Screen"
+            android:screenOrientation="portrait"
+        android:label="Splash Screen"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,6 +29,8 @@
         </activity>
         <activity
             android:name=".activities.MainActivity"
+            android:screenOrientation="portrait"
+
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
@@ -36,6 +39,8 @@
         </activity>
         <activity
             android:name=".activities.LoginActivity"
+            android:screenOrientation="portrait"
+
             android:label="@string/title_activity_login"
             android:parentActivityName=".activities.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -45,24 +50,36 @@
         </activity>
         <activity
             android:name=".activities.ScrollingActivity"
+            android:screenOrientation="portrait"
+
             android:label="@string/title_activity_scrolling"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activities.SingupActivity"
+            android:screenOrientation="portrait"
+
             android:label="@string/title_activity_scrolling"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activities.Navigation"
+            android:screenOrientation="portrait"
+
             android:label="@string/title_activity_navigation"
             android:parentActivityName=".activities.LoginActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activities.activity_otp"
+            android:screenOrientation="portrait"
+
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activities.EmailActivity"
+            android:screenOrientation="portrait"
+
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".activities.RegistrationActivity"
+            android:screenOrientation="portrait"
+
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

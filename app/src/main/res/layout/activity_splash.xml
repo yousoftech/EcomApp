@@ -7,20 +7,24 @@
     android:background="@color/colorPrimaryDark"
     tools:context="com.example.arpitshah.ecomapp.activities.SplashActivity">
 
-   <!-- <ImageView
+    <ImageView
         android:layout_width="350dp"
         android:layout_height="350dp"
-        android:src="@drawable/logo1"
+android:src="@drawable/logo"
+        android:id="@+id/iv"
+        android:background="@android:color/transparent"
         android:layout_centerVertical="true"
         android:layout_marginBottom="30dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:layout_marginTop="30dp"
-        android:layout_centerHorizontal="true"/>-->
+        android:layout_centerHorizontal="true"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/tv"
         android:gravity="center"
+        android:layout_below="@+id/iv"
         android:layout_centerVertical="true"
         android:text="WELCOME SCREEN"
         android:fontFamily="sans-serif-smallcaps"
