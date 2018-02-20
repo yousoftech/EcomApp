@@ -7,13 +7,19 @@
     <!-- TODO: Update blank fragment layout -->
 
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="285dp"
-        android:text="Chai Fragment"
-        android:textSize="50dp"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/productlist"
+        android:layout_below="@+id/recyclerProducts"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#fff"
+
+        >
+
+    </android.support.v7.widget.RecyclerView>
+
+
+
 </RelativeLayout>
