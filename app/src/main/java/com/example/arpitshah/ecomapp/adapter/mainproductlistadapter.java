@@ -8,12 +8,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.VideoView;
 
 import com.example.arpitshah.ecomapp.R;
 import com.example.arpitshah.ecomapp.Util.ConnectionDetector;
 import com.example.arpitshah.ecomapp.pojo.*;
+import com.hariofspades.incdeclibrary.IncDecCircular;
 
 import java.util.ArrayList;
 
@@ -27,6 +29,7 @@ public class mainproductlistadapter extends RecyclerView.Adapter<mainproductlist
     LayoutInflater inflater;
 
 
+    ArrayList<String> values=new ArrayList<>();
 
 
     public  mainproductlistadapter(Context context,ArrayList<product> event) {
@@ -44,6 +47,18 @@ public class mainproductlistadapter extends RecyclerView.Adapter<mainproductlist
 
     @Override
     public void onBindViewHolder(RecyclerViewHolder holder, int position) {
+       values.add( "1" );
+        values.add( "2" );
+        values.add( "3" );
+        values.add( "4" );
+        values.add( "5" );
+        values.add( "6" );
+        values.add( "7" );
+        values.add( "8" );
+        values.add( "9" );
+        values.add( "10" );
+
+
         String image=event.get (position).getProductimage ();
         String productname=event.get (position).getProductname ();
         String productid=event.get (position).getProductid ();
@@ -54,6 +69,11 @@ public class mainproductlistadapter extends RecyclerView.Adapter<mainproductlist
         //holder.productimage.setIm
         holder.txtproductname.setText( productname );
         holder.txtproductprice.setText (productprice);
+       holder.incdec.setConfiguration( LinearLayout.HORIZONTAL,IncDecCircular.TYPE_ARRAY,
+                IncDecCircular.DECREMENT,IncDecCircular.INCREMENT);
+        holder. incdec.setArrayList(values  );
+        holder. incdec.setArrayIndexes(0,9,1);
+        holder. incdec.enableLongPress(true,true,500);
 
     }
 
@@ -65,15 +85,26 @@ public class mainproductlistadapter extends RecyclerView.Adapter<mainproductlist
         TextView txtproductname,txtproductprice,txtproductdesname,txtproductquantity;
         Button btnproductaddcart;
         ImageView productimage;
+        IncDecCircular incdec;
 
         public RecyclerViewHolder(View itemView) {
             super (itemView);
             txtproductdesname=(TextView)itemView.findViewById (R.id.txtproductdesname);
             txtproductname=(TextView)itemView.findViewById (R.id.txtproductname);
-            txtproductquantity=(TextView)itemView.findViewById (R.id.txtproductquantity);
-            btnproductaddcart=(Button)itemView.findViewById (R.id.btnproductaddcart);
+             incdec=(IncDecCircular)itemView.findViewById(R.id.incdec);
+
+            // txtproductquantity=(TextView)itemView.findViewById (R.id.txtproductquantity);
+          //  btnproductaddcart=(Button)itemView.findViewById (R.id.btnproductaddcart);
             productimage=(ImageView)itemView.findViewById (R.id.productimage);
             txtproductprice=(TextView)itemView.findViewById (R.id.txtproductprice);
+            ArrayList<String> values=new ArrayList<>();
+            values.add("Apple");
+            values.add("Ball");
+            values.add("Cat");
+            values.add("Dog");
+            values.add("Elephant");
+
+
         }
     }
 }

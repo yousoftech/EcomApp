@@ -32,38 +32,36 @@
                 android:layout_toRightOf="@id/productimage"
                 android:layout_marginTop="5dp"
                 android:text="Product Name"
-                android:textSize="22dp"
+                android:textSize="17dp"
                 android:fontFamily="casual"
-                android:layout_marginLeft="10dp"
                 android:textStyle="bold"
                 android:textColor="#000000"/>
-            <TextView
-                android:id="@+id/txtproductdesname"
-                android:layout_width="180dp"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/productimage"
-                android:layout_below="@id/txtproductname"
-                android:layout_marginTop="5dp"
-                android:fontFamily="casual"
 
-                android:layout_marginLeft="10dp"
-                android:text="Product Description"
-                android:textSize="14dp"
-                android:textColor="#000000"
-                />
+            <com.hariofspades.incdeclibrary.IncDecCircular
+                android:id="@+id/incdec"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignBottom="@+id/txtproductprice"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/txtproductprice"
+                android:layout_toEndOf="@+id/txtproductprice"
+                android:layout_toRightOf="@+id/txtproductprice"
+                app:leftDrawable="@drawable/ic_remove_black_"
+                app:rightDrawable="@drawable/ic_add_black_cart"
+                app:textColor="@color/white"
+                app:textSize="44" />
 
             <TextView
                 android:id="@+id/txt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@+id/productimage"
-                android:layout_marginLeft="10dp"
                 android:textColor="#000000"
                 android:fontFamily="casual"
-
-                android:layout_below="@id/txtproductdesname"
+                android:layout_below="@id/txtproductname"
                 android:text="Price : "
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:textSize="15dp"
 
                 />
@@ -73,41 +71,41 @@
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/txt"
                 android:textColor="#000000"
-                android:layout_below="@id/txtproductdesname"
+                android:layout_below="@id/txtproductname"
                 android:text="0000"
                 android:fontFamily="casual"
-
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:textSize="15dp"
                 />
 
             <TextView
+                android:id="@+id/txtproductdesname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/productimage"
+                android:layout_below="@id/incdec"
+                android:layout_marginTop="5dp"
+                android:fontFamily="casual"
+
+                android:text="Product Description"
+                android:textSize="14dp"
+                android:textColor="#000000"
+                />
+
+
+         <!--   <TextView
                 android:id="@+id/txtproductquantity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignTop="@+id/txtproductdesname"
-                android:layout_marginEnd="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_toLeftOf="@+id/btnproductaddcart"
-                android:layout_toStartOf="@+id/btnproductaddcart"
-
+                android:layout_toRightOf="@+id/txtproductname"
                 android:fontFamily="casual"
-                android:gravity="center"
+                android:layout_margin="10dp"
+                android:paddingLeft="40dp"
                 android:text="1"
                 android:textColor="#000000"
-                android:textSize="22dp" />
+                android:textSize="22dp" />-->
 
-            <Button
 
-                android:id="@+id/btnproductaddcart"
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_below="@+id/txtproductname"
-                android:layout_gravity="right"
-                android:background="@drawable/ic_add_black_cart"
-                android:gravity="center|right" />
 
         </RelativeLayout>
     </android.support.v7.widget.CardView>
