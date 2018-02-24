@@ -21,6 +21,7 @@ import java.util.ArrayList;
 
 public class productAdapter extends RecyclerView.Adapter<productAdapter.RecyclerViewHolder> {
 
+    
     Context context;
     ArrayList<Category> event;
     LayoutInflater inflater;
